@@ -1,6 +1,14 @@
+@import "./components/header";
+@import "./components/footer";
+
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background: #f2f2f2;
-  }
-  
+  font-family: sans-serif;
+  //padding: 0 100px 0 100px;
+  margin: 0;
+  background: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+
+  //@media screen and (max-width: 768px) {
+  //  padding: 0 20px 0 20px;
+  //}
+}

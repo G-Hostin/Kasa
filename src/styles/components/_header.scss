@@ -1,0 +1,44 @@
+header {
+  background: #ffffff;
+  //padding: 1rem;
+  margin: 50px 0 50px 0;
+  padding: 0 100px 0 100px;
+  @media screen and (max-width: 768px) {
+    padding: 0 20px 0 20px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      height: 68px;
+      @media screen and (max-width: 768px) {
+        height: 47px;
+      }
+    }
+    .main-menu {
+      a {
+        margin-right: 1rem;
+        margin-left: 20px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 24px;
+
+        &.active {
+          text-decoration: underline;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          margin: 0 0 0 20px;
+        }
+      }
+    }
+  }
+}
