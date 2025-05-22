@@ -5,7 +5,7 @@ function Banner({ image, text }) {
   return (
     <div className="banner">
       <img src={image} alt="Bannière" />
-      <div className="black-filter"></div>
+      <div className="black-filter-banner"></div>
       <div className="banner-text">
         <h1>{text}</h1>
       </div>
