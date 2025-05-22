@@ -16,7 +16,7 @@ function Header() {
             Accueil
           </NavLink>
           <NavLink
-            to="/about"
+            to="/a-propos"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             À Propos

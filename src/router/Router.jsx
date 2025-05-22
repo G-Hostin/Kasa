@@ -4,6 +4,7 @@ import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Accomodation from "../pages/Accomodation";
 
 function Router() {
   return (
@@ -11,7 +12,8 @@ function Router() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<Accomodation />} />
+        <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
