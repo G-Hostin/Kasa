@@ -1,0 +1,64 @@
+.collapse {
+  margin-bottom: 20px;
+
+  .collapse-title {
+    background-color: #ff6060;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px 10px 5px 5px;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+
+    .collapse-arrow {
+      width: 24px;
+      transition: transform 0.3s ease;
+
+      &.open {
+        transform: rotate(-180deg);
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 12px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 30px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    &.open {
+      max-height: 500px;
+    }
+
+    .collapse-text {
+      background-color: #f6f6f6;
+      padding: 10px 20px;
+      border-radius: 0 0 5px 5px;
+      font-size: 0.9rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.aboutpage {
+  padding: 0 100px 0 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px 0 20px;
+  }
+
+  .about-collapsesection {
+    padding: 0 10% 0 10%;
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+  }
+}
