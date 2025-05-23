@@ -1,0 +1,14 @@
+.stars-component {
+  display: flex;
+  gap: 5px;
+
+  .star {
+    height: 24px;
+    width: 24px;
+
+    @media screen and (max-width: 768px) {
+      height: 14px;
+      width: 14px;
+    }
+  }
+}
