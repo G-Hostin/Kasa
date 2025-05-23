@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import arrowLeft from "../assets/arrow-left-slideshow.png";
 import arrowRight from "../assets/arrow-right-slideshow.png";
 import "../styles/components/_slideshow.scss";
@@ -21,13 +21,19 @@ function Slideshow({ pictures }) {
     }); //Enlève 1 à l'index actuel et si il est inférieur à 0 (0 étant la première photo) alors on repasse à la dernière photo (nombre total de photo -1 car l'index est décalé de 1) sinon on reste sur le nouvel index
   };
 
+  useEffect(() => {
+    const time = setTimeout(nextSlide, 3000); //setTimout execute nextSlide tous les 3s
+
+    return () => clearTimeout(time); //clearTimeout permet de supprimer l'ancien timer avant d'en relancer un nouveau, sinon plein de timer peuvent s'enchainer (si l'user clique par ex)
+  }, [index, numberPictures]); //Execute ce useEffect à chaque fois que l'index change (donc que la photo change manuellement ou automatiquement), numberPictures est la pour contrer une erreur ESLint
+
   return (
     <div className="slideshow">
       <img
         src={pictures[index]}
         alt={`Photo ${index + 1}`}
         className="slideshow-picture"
-      />{" "}
+      />
       {/*Prends en src la photo de l'index actuel, en alt Photo index+1 (car l'index est décalé de 1 et photo 0 n'est pas correct) */}
       {/*Si le nombre de photos et superieur à 1 alors on affiche les flèches et les numéros, sinon pas besoin*/}
       {numberPictures > 1 && (
@@ -37,7 +43,7 @@ function Slideshow({ pictures }) {
             alt="Flèche gauche"
             className="arrow-left-slideshow"
             onClick={previousSlide}
-          />{" "}
+          />
           {/*Appel previousSlide au clic*/}
           <img
             src={arrowRight}
