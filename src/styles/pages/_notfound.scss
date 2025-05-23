@@ -1,0 +1,43 @@
+.notfoundpage {
+  text-align: center;
+  color: #ff6060;
+  padding: 50px 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 20px;
+  }
+
+  .title-notfound {
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 96px;
+    }
+  }
+
+  .text-notfound {
+    font-size: 32px;
+    margin: 50px 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      margin: 80px 0;
+    }
+  }
+
+  .link-notfound {
+    font-size: 18px;
+    text-decoration: underline;
+    color: #000000;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: #ff6060;
+    }
+  }
+}
