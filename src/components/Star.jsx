@@ -9,7 +9,7 @@ function Star({ rating }) {
 
   return (
     <div className="stars-component">
-      {/*Array(activeStars) créé un tableau avec des [undefined, undefined etc] et le spread operator permet de les étaler (sinon .map pas possible sur un tableau vide) */}
+      {/*Array(activeStars) créé un tableau avec des [undefined, undefined etc] et le spread operator permet de les étaler (sinon .map pas possible sur un tableau vide)*/}
       {[...Array(activeStars)].map((star, i) => (
         <img
           key={"active-star-" + i}
