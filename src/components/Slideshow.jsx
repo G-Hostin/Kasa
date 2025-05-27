@@ -6,6 +6,7 @@ import "../styles/components/_slideshow.scss";
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0); //Index actuel
   const numberPictures = pictures.length; //Nombre total de photos sur un logement
+  const showArrows = numberPictures > 1; //Si il y a plus d'une photo alors showArrows est true
 
   const nextSlide = () => {
     setIndex((oldIndex) => {
@@ -36,7 +37,7 @@ function Slideshow({ pictures }) {
       />
       {/*Prends en src la photo de l'index actuel, en alt Photo index+1 (car l'index est décalé de 1 et photo 0 n'est pas correct) */}
       {/*Si le nombre de photos et superieur à 1 alors on affiche les flèches et les numéros, sinon pas besoin*/}
-      {numberPictures > 1 && (
+      {showArrows && (
         <div className="arrows-slideshow">
           <img
             src={arrowLeft}
